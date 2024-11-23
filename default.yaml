@@ -1,19 +1,19 @@
 # Rime default settings
 # encoding: utf-8
 
-config_version: "2023-12-18"
+config_version: '2023-12-18'
 
 schema_list:
   - schema: lufs_pinyin # 朙月拼音
-  - schema: lufs_flypy # 小鹤双拼
+  #- schema: lufs_flypy # 小鹤双拼
   # - schema: lufs_mspy # 微软双拼
   # - schema: lufs_dpy # 自然码双拼
   # - schema: lufs_pyjj # 拼音加加双拼
 
 switcher:
-  caption: "[方案菜单]"
+  caption: '[方案菜单]'
   hotkeys:
-    - ctrl+`
+    - F2
   save_options:
     - full_shape
     - ascii_punct
@@ -21,7 +21,7 @@ switcher:
     - emoji_suggestion
   fold_options: true
   abbreviate_options: true
-  option_list_separator: "/"
+  option_list_separator: '/'
 
 menu:
   page_size: 9
@@ -35,15 +35,15 @@ punctuator:
 recognizer:
   patterns:
     # 禁止部分输入的自动上屏
-    camel: "[a-z]+[A-Z].*$" # 驼峰命名
-    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$" # email 地址
-    html: "^<[a-z]+>$" # HTML TAG
+    camel: '[a-z]+[A-Z].*$' # 驼峰命名
+    email: '^[A-Za-z][-_.0-9A-Za-z]*@.*$' # email 地址
+    html: '^<[a-z]+>$' # HTML TAG
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$" # 大写开头
-    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$" # URL 输入
+    url: '^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$' # URL 输入
 
     # 响应功能
-    punct: "^/([0-9]0?|[A-Za-z]+)$" # 响应 lufs_symbols.yaml 内的输入
-    unicode: "^U[a-f0-9]+" # 响应 Unicode
+    punct: '^/([0-9]0?|[A-Za-z]+)$' # 响应 lufs_symbols.yaml 内的输入
+    unicode: '^U[a-f0-9]+' # 响应 Unicode
 
 ascii_composer:
   good_old_caps_lock: true
@@ -56,8 +56,8 @@ ascii_composer:
     Eisu_toggle: clear
 
 key_binder:
-  select_first_character: "bracketleft" # lua 选词快捷键，选第一个字
-  select_last_character: "bracketright" # lua 选词快捷键，选最后一个字
+  select_first_character: 'bracketleft' # lua 选词快捷键，选第一个字
+  select_last_character: 'bracketright' # lua 选词快捷键，选最后一个字
   bindings:
     # Tab / Shift + Tab 翻页
     - { when: composing, accept: Tab, send: Page_Down } # Tab 向下翻页

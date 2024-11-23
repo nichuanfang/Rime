@@ -4,7 +4,7 @@
 schema:
   schema_id: lufs_pinyin
   name: 朙月拼音
-  version: "2023-12-18"
+  version: '2023-12-18'
   author:
     - 佛振 <chen.sst@gmail.com>
     - Modified by Lufs_X <i@isteed.cc>
@@ -18,8 +18,10 @@ switches:
     states: [中文, 西文]
   - name: full_shape
     states: [半角, 全角]
+    reset: 0
   - name: ascii_punct
     states: [。，, ．，]
+    reset: 1
   - name: traditionalization
     # reset: 0 # 默认状态: 0 简体 1 繁体
     states: [简, 繁]
@@ -158,7 +160,7 @@ recognizer:
   import_preset: default
 
 custom_phrase:
-  dictionary: ""
+  dictionary: ''
   user_dict: custom_phrase
   db_class: stabledb
   enable_completion: false

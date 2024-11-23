@@ -4,8 +4,8 @@
 config_version: "2023-12-18"
 
 schema_list:
-  - schema: lufs_flypy # 小鹤双拼
   - schema: lufs_pinyin # 朙月拼音
+  - schema: lufs_flypy # 小鹤双拼
   # - schema: lufs_mspy # 微软双拼
   # - schema: lufs_dpy # 自然码双拼
   # - schema: lufs_pyjj # 拼音加加双拼
@@ -13,7 +13,7 @@ schema_list:
 switcher:
   caption: "[方案菜单]"
   hotkeys:
-    - F2
+    - ctrl+`
   save_options:
     - full_shape
     - ascii_punct
@@ -24,7 +24,7 @@ switcher:
   option_list_separator: "/"
 
 menu:
-  page_size: 4
+  page_size: 9
 
 punctuator:
   full_shape:
